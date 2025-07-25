@@ -1,0 +1,484 @@
+<!-- ✅ FULLY RESPONSIVE VERSION OF YOUR CODE -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transform Furniture</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Alpine.js CDN -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    .font-serif { font-family: 'Playfair Display', serif; }
+    .font-sans { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- 🔝 NAVIGATION -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <!-- LOGO -->
+      <h1 class="text-4xl font-bold" style="font-family: 'Times New Roman'; color: black;">TRANSFORM</h1>
+
+      <!-- DESKTOP NAV -->
+      <nav class="hidden md:flex space-x-8 items-center">
+        <a href="" class="text-gray-600 hover:text-gray-900">Home</a>
+
+         <!-- 🔽 Seating Solution Dropdown -->
+      <div class="relative group">
+        <button
+          class="text-gray-600 hover:text-gray-900 inline-flex items-center"
+          onclick="document.getElementById('seating-menu').classList.toggle('hidden')"
+        >
+          Seating Solution
+          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div
+          id="seating-menu"
+          class="absolute hidden group-hover:flex flex-wrap bg-white shadow-xl ring-1 ring-black/5 rounded-lg p-4 mt-2 z-50 w-auto min-w-[500px]"
+          onmouseleave="this.classList.add('hidden')"
+        >
+          <!-- Column 1 -->
+          <div class="w-1/3 space-y-2">
+            <a href="director.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Director</a>
+            <a href="executive.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Executive</a>
+            <a href="conference.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Conference</a>
+            <a href="office.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Office</a>
+            <a href="workstation.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Workstation</a>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="w-1/3 space-y-2">
+            <a href="staff.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Staff</a>
+            <a href="visitors.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Visitor</a>
+            <a href="training.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Training</a>
+            <a href="casual.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Casual</a>
+            <a href="cafeteria.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Cafeteria</a>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="w-1/3 space-y-2">
+            <a href="lounge.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Lounge</a>
+            <a href="reception.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Reception</a>
+            <a href="public.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Public</a>
+            <a href="collaborative.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Collaborative</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Office Furniture Dropdown -->
+      <div class="relative group">
+        <button
+          class="text-gray-600 hover:text-gray-900 inline-flex items-center"
+          onclick="document.getElementById('office-menu').classList.toggle('hidden')"
+        >
+          Office Furniture
+          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div
+          id="office-menu"
+          class="absolute hidden group-hover:flex flex-wrap bg-white shadow-xl ring-1 ring-black/5 rounded-lg p-4 mt-2 z-50 w-auto min-w-[300px]"
+          onmouseleave="this.classList.add('hidden')"
+        >
+           <div class="w-1/2 space-y-2">
+              <a href="workstation2.html" class="block px-3 py-2 text-sm hover:bg-gray-100 rounded">Workstation</a>
+              <a href="officetable.html" class="block px-3 py-2 text-sm hover:bg-gray-100 rounded">Office Table</a>
+            </div>
+            <div class="w-1/2 space-y-2">
+              <a href="storage.html" class="block px-3 py-2 text-sm hover:bg-gray-100 rounded">Storage</a>
+              <a href="partition.html" class="block px-3 py-2 text-sm hover:bg-gray-100 rounded">Partition</a>
+            </div>
+        </div>
+      </div>
+
+
+       <!-- Catalouge Dropdown -->
+      <!-- Catalogue Dropdown -->
+      <div class="relative group">
+        <button
+          class="text-gray-600 hover:text-gray-900 inline-flex items-center"
+          onclick="document.getElementById('catalogue-menu').classList.toggle('hidden')"
+        >
+          Catalogue
+          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div
+          id="catalogue-menu"
+          class="absolute hidden group-hover:flex flex-wrap bg-white shadow-xl ring-1 ring-black/5 rounded-lg p-4 mt-2 z-50 w-auto min-w-[300px]"
+          onmouseleave="this.classList.add('hidden')"
+        >
+          <div class="space-y-2">
+            <a href="./catalouge/TRANSFORM - Seating Solution.pdf" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">
+              Seating Solution Catalogue
+            </a>
+            <a href="./catalouge/TRANSFORM - Office Mesh Chairs.pdf" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">
+              Office Chair Catalogue
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+       
+         
+
+          <!-- Contact Link -->
+          <a href="contact.html" class="text-gray-600 hover:text-gray-900">Contact</a>
+        </div>
+      </nav>
+
+  </header>
+
+  <!-- 🖼️ Animated Hero Section with Text & Image -->
+<section 
+  x-data="heroCarousel()" 
+  x-init="start()"
+  class="relative min-h-[90vh] bg-[url('./assets/images/Capture.png')] bg-cover bg-center bg-no-repeat py-14 px-4 text-center before:absolute before:inset-0 before:bg-black/60 before:z-0 z-10"
+
+ 
+> 
+<br>
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 relative overflow-hidden">
+    
+    <!-- 📝 TEXT SLIDE -->
+  <div class="relative h-72 flex items-center justify-center">
+  <template x-for="(item, index) in items" :key="index">
+    <div
+      x-show="current === index"
+      x-transition:enter="transition ease-out duration-700"
+      x-transition:enter-start="opacity-0 -translate-x-10"
+      x-transition:enter-end="opacity-100 translate-x-0"
+      class="absolute w-full"
+    >
+      <p class="text-orange-100 text-2xl mt-10 tracking-wide text-center" style="font-family: 'Inter', sans-serif;" x-text="item.line1"></p>
+
+      <div class="text-6xl md:text-7xl font-extrabold uppercase text-amber-200 leading-tight text-center">
+        <span x-text="item.line2Top"></span><br />
+        <span class="text-amber-200" x-text="item.line2Bottom"></span>
+      </div>
+
+          </div>
+        </template>
+      </div>
+
+
+    <!-- 🖼️ IMAGE SLIDE -->
+      <div class="relative origin-center h-[26rem] md:h-[28rem] overflow-hidden rounded-2xl">
+    <template x-for="(item, index) in items" :key="index">
+      <div
+        x-show="current === index"
+        x-transition:enter="transition ease-out duration-700"
+        x-transition:enter-start="opacity-0 translate-x-10"
+        x-transition:enter-end="opacity-100 translate-x-0"
+        class="absolute inset-0 flex items-center justify-center"
+      >
+        <img 
+          :src="item.image" 
+          :alt="item.name" 
+          class="max-h-full max-w-full object-contain rounded-2xl border-4 border-amber-300 shadow-xl"
+        />
+      </div>
+    </template>
+  </div>
+
+
+  </div>
+</section>
+
+
+
+
+  <!-- 🪑 PRODUCT GRID SECTION -->
+  <section id="products" class="py-16 px-6 bg-white">
+   <div class="max-w-7xl mx-auto">
+      <div class="w-full px-2 bg-amber-300 py-2 flex items-center justify-center relative">
+        
+        <h1 class="text-3xl font-dark text-black tracking-wide">SEATING SOLUTIONS</h1>
+      </div>
+    </div>
+
+
+
+      <!-- 🖼️ Horizontal Scrollable Card Slider -->
+      <!-- Carousel Section -->
+      <div x-data="cardCarousel()" x-init="init()" @mouseenter="stopAutoSlide()" @mouseleave="startAutoSlide()" class="relative w-full max-w-6xl mx-auto py-16  overflow-hidden">
+
+        <!-- Navigation Buttons -->
+        <button @click="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full hover:bg-gray-200">
+          &#10094;
+        </button>
+        <button @click="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full hover:bg-gray-200">
+          &#10095;
+        </button>
+
+        <!-- Cards Carousel -->
+        <div class="flex items-center justify-center gap-6">
+          <template x-for="(card, index) in visibleCards()" :key="card.title">
+            <a :href="card.link" class="transition-all duration-300 ease-in-out transform"
+               :class="{
+                 'scale-105 z-10 shadow-2xl': index === 1,  // middle card
+                 'scale-95 opacity-80': index !== 1
+               }"
+               style="width: 280px;">
+              <div class="bg-white rounded-xl border p-4 hover:border-orange-400">
+                <!-- <img :src="card.image" alt="Chair" class="w-full h-72 object-cover rounded-lg mb-4" /> -->
+                <img 
+                    :src="card.image" 
+                    alt="Chair" 
+                    class="w-full h-72 object-cover rounded-lg border border-black hover:border-orange-600 transition mb-4"
+                  />
+
+                <h4 class="text-center text-lg font-semibold text-gray-800 hover:text-indigo-600 transition">
+                  <span x-text="card.title"></span>
+                </h4>
+              </div>
+            </a>
+          </template>
+        </div>
+        </div>
+    </div>
+  </section>
+
+   <!-- office card -->
+   <section id="officefuriture" class="py-16 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="w-full px-2 bg-amber-300 py-2 flex items-center justify-center relative">
+        
+        <h1 class="text-3xl font-dark text-black tracking-wide">OFFICE FURNITURE</h1>
+      </div>
+    </div>
+
+
+
+      <!-- 🖼️ Horizontal Scrollable Card Slider -->
+      <!-- Carousel Section -->
+      <div x-data="officecardCarousel()" x-init="init()" @mouseenter="stopAutoSlide()" @mouseleave="startAutoSlide()" class="relative w-full max-w-6xl mx-auto py-16  overflow-hidden">
+
+        <!-- Navigation Buttons -->
+        <button @click="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full hover:bg-gray-200">
+          &#10094;
+        </button>
+        <button @click="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full hover:bg-gray-200">
+          &#10095;
+        </button>
+
+        <!-- Cards Carousel -->
+        <div class="flex items-center justify-center gap-6">
+          <template x-for="(card, index) in visibleCards()" :key="card.title">
+            <a :href="card.link" class="transition-all duration-300 ease-in-out transform"
+               :class="{
+                 'scale-105 z-10 shadow-2xl': index === 1,  // middle card
+                 'scale-95 opacity-80': index !== 1
+               }"
+               style="width: 280px;">
+              <div class="bg-white rounded-xl border p-4 hover:border-orange-400">
+                <!-- <img :src="card.image" alt="Chair" class="w-full h-72 object-cover rounded-lg mb-4" /> -->
+                <img 
+                  :src="card.image" 
+                  alt="Chair" 
+                  class="w-full h-72 object-cover rounded-lg border border-black hover:border-orange-600 transition mb-4"
+                />
+
+                <h4 class="text-center text-lg font-semibold text-gray-800 hover:text-indigo-600 transition">
+                  <span x-text="card.title"></span>
+                </h4>
+              </div>
+            </a>
+          </template>
+        </div>
+        </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- 🧾 ABOUT SECTION -->
+  <section id="about" class="bg-amber-50 py-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-6">Transforming Workspaces with Innovative Office Furniture</h3>
+      <p class="text-gray-700 text-lg">
+        At<b> TRANSFORM FURNITURE</b>, we are committed to delivering premium office furniture solutions that combine functionality, comfort, and sophisticated design. Our mission is to help organizations create work environments that enhance productivity, reflect brand identity, and support employee well-being.
+
+With a strong focus on quality, innovation, and service excellence
+      </p>
+    </div>
+  </section>
+
+
+  <!-- 📞 FOOTER -->
+  <footer id="contact" class="bg-amber-200 text-gray-800 text-gray-800 py-10">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Company Info -->
+    <div>
+      <p>&copy; 2025 Transform Furniture</p>
+      <!-- <p>All rights reserved.</p> -->
+    </div>
+
+    <!-- Contact Details -->
+    <div>
+      <h2 class="text-lg font-semibold mb-2">Contact Us</h2>
+      <p>Phone:</p><p>+91 9825197719</p>
+      <p>Email:</p>
+      <p>transformfurniture23@gmail.com</p>
+    </div>
+
+    <!-- Address & Social -->
+    <div>
+      <!-- <h2 class="text-lg font-semibold mb-2">Visit Us</h2> -->
+      <h2 class="text-lg font-semibold mb-2">TRANSFORM FURNITURE & INTERIOR</h2>
+      <p>Gala Argos, 5th Floor</p>
+      <p>Gujarat College Road</p>
+      <p>Ellisbridge, Ahmedabad - 380006</p>
+
+    </div>
+  </div>
+</footer>
+
+  <script>
+  // Hero Section Carousel
+  function heroCarousel() {
+    return {
+      current: 0,
+      items: [
+        {
+          line1: 'Ergonomic Meet',
+          line2Top: 'STYLE',
+          line2Bottom: '',
+          image: './assets/images/AmazeChair_DSC7538-1.webp'
+        },
+        {
+          line1: 'Creating space that',
+          line2Top: 'INSPIRE',
+          line2Bottom: '',
+          image: './assets/images/E007.webp'
+          
+        },
+        {
+          line1: 'Redefine Your',
+          line2Top: 'WORK',
+          line2Bottom: 'PLACE',
+          image: './assets/images/download.webp'
+
+        }
+      ],
+      start() {
+        setInterval(() => {
+          this.current = (this.current + 1) % this.items.length;
+        }, 2000);
+      }
+    };
+  }
+
+  // Card Carousel
+  function cardCarousel() {
+    return {
+      currentIndex: 0,
+      interval: null,
+      cards: [
+        { title: 'Director', image: './assets/images/director/Yoma.webp', link: 'director.html' },
+        { title: 'Executive', image: './assets/images/executive/helix.webp', link: 'executive.html' },
+        { title: 'Conference', image: './assets/images/conference/tycoon.webp', link: 'conference.html' },
+        { title: 'Office', image: './assets/images/office/Liberate.webp', link: 'office.html' },
+        { title: 'Workstation', image: './assets/images/workstation/amaze.webp', link: 'workstation.html' },
+        { title: 'Staff', image: './assets/images/staff/alpha.webp', link: 'staff.html' },
+        { title: 'Visitor', image: './assets/images/visitors/forum.webp', link: 'visitors.html' },
+        { title: 'Training', image: './assets/images/training/data.webp', link: 'training.html' },
+        { title: 'Casual', image: './assets/images/casual/leafcafe.webp', link: 'casual.html' },
+        { title: 'Cafeteria', image: './assets/images/cafeteria/tango.webp', link: 'cafeteria.html' },
+        { title: 'Lounge', image: './assets/images/lounge/flora.webp', link: 'lounge.html' },
+        { title: 'Reception', image: './assets/images/reception/barrister.webp', link: 'reception.html' },
+        { title: 'Public', image: './assets/images/public/Sleek.webp', link: 'public.html' },
+        { title: 'Collaborative', image: './assets/images/collaborative/concave.jpg', link: 'collaborative.html' },
+      ],
+      visibleCards() {
+        const total = this.cards.length;
+        const prev = (this.currentIndex - 1 + total) % total;
+        const current = this.currentIndex;
+        const next = (this.currentIndex + 1) % total;
+        return [this.cards[prev], this.cards[current], this.cards[next]];
+      },
+      next() {
+        this.currentIndex = (this.currentIndex + 1) % this.cards.length;
+      },
+      prev() {
+        this.currentIndex = (this.currentIndex - 1 + this.cards.length) % this.cards.length;
+      },
+      startAutoSlide() {
+        this.interval = setInterval(() => {
+          this.next();
+        }, 4000); // every 4 seconds
+      },
+      stopAutoSlide() {
+        clearInterval(this.interval);
+      },
+      init() {
+        this.startAutoSlide();
+      }
+    };
+  }
+
+  // Office Card Carousel
+  function officecardCarousel() {
+    return {
+      currentIndex: 0,
+      interval: null,
+      cards: [
+        { title: 'Workstation', image: './assets/images/office_furniture/workstation/Enrich.webp', link: 'workstation2.html' },
+        { title: 'Office Table', image: './assets/images/office_furniture/officetable/Enrich.jpg', link: 'officetable.html' },
+        { title: 'Storage', image: './assets/images/office_furniture/storage/Storage 1.webp', link: 'storage.html' },
+        { title: 'Partition', image: './assets/images/office_furniture/partition/partition 1.webp', link: 'partition.html' }
+      ],
+      visibleCards() {
+        const total = this.cards.length;
+        const prev = (this.currentIndex - 1 + total) % total;
+        const current = this.currentIndex;
+        const next = (this.currentIndex + 1) % total;
+        return [this.cards[prev], this.cards[current], this.cards[next]];
+      },
+      next() {
+        this.currentIndex = (this.currentIndex + 1) % this.cards.length;
+      },
+      prev() {
+        this.currentIndex = (this.currentIndex - 1 + this.cards.length) % this.cards.length;
+      },
+      startAutoSlide() {
+        this.interval = setInterval(() => {
+          this.next();
+        }, 4000); // every 4 seconds
+      },
+      stopAutoSlide() {
+        clearInterval(this.interval);
+      },
+      init() {
+        this.startAutoSlide();
+      }
+    };
+  }
+
+ 
+</script>
+
+
+
+</body>
+</html>

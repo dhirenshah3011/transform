@@ -1,0 +1,58 @@
+
+          <!-- MOBILE MENU BUTTON -->
+          <button @click="mobileMenu = !mobileMenu" class="md:hidden text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+
+       <!-- ✅ MOBILE MENU WITH DROPDOWNS -->
+    <div x-show="mobileMenu" class="md:hidden px-6 pb-4 space-y-2" x-transition>
+      <a href="" class="block text-gray-700">Home</a>
+
+      <!-- Seating Solution Dropdown -->
+      <div x-data="{ open: false }">
+        <button @click="open = !open" class="flex justify-between w-full text-left text-gray-700 font-medium">
+          Seating Solution
+          <svg :class="{ 'rotate-180': open }" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div x-show="open" class="mt-2 pl-4 space-y-1 text-sm" x-transition>
+          <a href="director.html" class="block text-gray-600">Director</a>
+          <a href="executive.html" class="block text-gray-600">Executive</a>
+          <a href="conference.html" class="block text-gray-600">Conference</a>
+          <a href="office.html" class="block text-gray-600">Office</a>
+          <a href="workstation.html" class="block text-gray-600">Workstation</a>
+          <a href="staff.html" class="block text-gray-600">Staff</a>
+          <a href="visitor.html" class="block text-gray-600">Visitor</a>
+          <a href="training.html" class="block text-gray-600">Training</a>
+          <a href="casual.html" class="block text-gray-600">Casual</a>
+          <a href="cafeteria.html" class="block text-gray-600">Cafeteria</a>
+          <a href="lounge.html" class="block text-gray-600">Lounge</a>
+          <a href="reception.html" class="block text-gray-600">Reception</a>
+          <a href="public.html" class="block text-gray-600">Public</a>
+          <a href="collaborative.html" class="block text-gray-600">Collaborative</a>
+        </div>
+      </div>
+
+      <!-- Office Furniture Dropdown -->
+      <div x-data="{ open: false }">
+        <button @click="open = !open" class="flex justify-between w-full text-left text-gray-700 font-medium">
+          Office Furniture
+          <svg :class="{ 'rotate-180': open }" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div x-show="open" class="mt-2 pl-4 space-y-1 text-sm" x-transition>
+          <a href="#workstation" class="block text-gray-600">Workstation</a>
+          <a href="#office-table" class="block text-gray-600">Office Table</a>
+          <a href="#storage" class="block text-gray-600">Storage</a>
+          <a href="#partition" class="block text-gray-600">Partition</a>
+        </div>
+      </div>
+
+      <a href="#about" class="block text-gray-700">About</a>
+      <a href="#contact" class="block text-gray-700">Contact</a>
+    </div>

@@ -50,14 +50,14 @@
       <!-- 🔁 Cards -->
       <script>
         const chairNames = [
-          'forum', 'bodyline', 'chrome', 'smart', 'tycoon'    ];
+          'forum', 'bodyline', 'chrome', 'smart', 'tycoon'];
 
         document.addEventListener('DOMContentLoaded', () => {
           const container = document.querySelector('main > div');
           chairNames.forEach(name => {
             const card = document.createElement('div');
             card.className = "bg-white rounded-2xl overflow-hidden shadow card hover:shadow-xl cursor-pointer";
-            card.setAttribute('onclick', `openLightbox('./assets/images/Visitors/${name}.webp')`);
+            card.setAttribute('onclick', `openLightbox('./assets/images/visitors/${name}.webp')`);
 
             card.innerHTML = `
               <img src="./assets/images/Visitors/${name}.webp" alt="${name}" class="w-full h-64 object-cover card-img"/>

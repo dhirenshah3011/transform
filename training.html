@@ -58,7 +58,7 @@
           chairNames.forEach(name => {
             const card = document.createElement('div');
             card.className = "bg-white rounded-2xl overflow-hidden shadow card hover:shadow-xl cursor-pointer";
-            card.setAttribute('onclick', `openLightbox('./assets/images/Training/${name}.webp')`);
+            card.setAttribute('onclick', `openLightbox('./assets/images/training/${name}.webp')`);
 
             card.innerHTML = `
               <img src="./assets/images/Training/${name}.webp" alt="${name}" class="w-full h-64 object-cover card-img"/>

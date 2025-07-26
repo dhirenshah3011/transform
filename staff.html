@@ -51,7 +51,7 @@
       <script>
         const chairNames = [
           'alpha', 'advantage', 'alpha2', 'bravo', 'click', 'comet', 'contact',
-          'forum','smart','telemate'
+          'Forum','smart','telemate'
         ];
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -59,7 +59,7 @@
           chairNames.forEach(name => {
             const card = document.createElement('div');
             card.className = "bg-white rounded-2xl overflow-hidden shadow card hover:shadow-xl cursor-pointer";
-            card.setAttribute('onclick', `openLightbox('./assets/images/Staff/${name}.webp')`);
+            card.setAttribute('onclick', `openLightbox('./assets/images/staff/${name}.webp')`);
 
             card.innerHTML = `
               <img src="./assets/images/Staff/${name}.webp" alt="${name}" class="w-full h-64 object-cover card-img"/>
